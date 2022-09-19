@@ -1,0 +1,28 @@
+.container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 300px));
+  gap: 50px;
+}
+
+.main {
+  margin: 20px;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  cursor: default;
+}
+
+.post:hover {
+  transform: scale(1.02);
+}
+
+input {
+  margin: 20px 0;
+}

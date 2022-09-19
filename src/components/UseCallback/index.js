@@ -1,16 +1,5 @@
-import React from 'react';
-import P from 'prop-types';
-import { useCallback, useState } from 'react';
-
-const Button = React.memo(({ increment }) => {
-  console.log('BUTTON - renderizei');
-
-  return <button onClick={() => increment(10)}>PLUS 10</button>;
-});
-
-Button.propTypes = {
-  increment: P.func,
-};
+import Button from '../../utils/button'
+import React, { useCallback, useState } from 'react';
 
 const UseCallback = () => {
   const [counter, setCounter] = useState(0);
@@ -23,7 +12,7 @@ const UseCallback = () => {
   return (
     <div className="App">
       <h1>Contador: {counter}</h1>
-      <Button increment={incrementCounter} />
+      <Button increment={incrementCounter}/>
     </div>
   );
 };
