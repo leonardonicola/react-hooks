@@ -1,6 +1,14 @@
 import React from 'react';
-import { AppContext } from '../../contexts/App';
-import {H1} from './H1';
+import { AppContext, GlobalContext } from '../../contexts/App';
+import {useContext} from 'react'
+
+const H1 = () => {
+    const theContext = useContext(GlobalContext);
+    return (
+        <h1>{theContext.title}</h1>
+    );
+  };
+
 
 /* O H1 está buscando o contexto
 e renderizando um elemento do estado global
